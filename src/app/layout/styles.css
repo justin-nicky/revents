@@ -1,4 +1,8 @@
-.App {
-  text-align: center;
+body{
+  background-color: #eaeaea;
+}
+
+.ui.fixed.menu {
+  background-color: grey;
 }
 

@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
+import EventDashboard from '../../features/events/eventDashboard/EventDashboard';
+import NavBar from '../../features/nav/NavBar';
 
-function App() {
+export default function App() {
+  const [formOpen, setFormOpen] = useState(false);
   return (
-    <div className="App">
-      <h1>re-vents</h1>
+    <div>
+      <NavBar setFormOpen={setFormOpen} />
+      <div style={{ paddingTop: '7em' }}>
+        <EventDashboard formOpen={formOpen} setFormOpen={setFormOpen} />
+      </div>
     </div>
   );
 }
-
-export default App;
